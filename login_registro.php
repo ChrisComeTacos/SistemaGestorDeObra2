@@ -55,7 +55,7 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
           <!-- registro -->
           <form class="formulario__register">
             <h2><a href="index.html">Aquí puedes conocer más sobre nosotros.</a></h2>
-            <button>Entrar</button>
+            <!-- <button>Entrar</button> -->
             <!-- <p>Pulsa aquí para informarte de todo lo que JACTORRES ofrece para tí.</p> -->
 
           </form>

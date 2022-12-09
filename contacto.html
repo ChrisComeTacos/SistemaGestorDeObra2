@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto JACTORRES</title>
+    <script
+    src="https://kit.fontawesome.com/1271cb789e.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <link rel="stylesheet" href="assets/css/info.css" />
+</head>
+  </head>
+  <body>
+    <header>
+      <div class="container__menu">
+        <div class="logo">
+          <img src="assets/img/LogoJACTORRES.svg" alt="Logotipo del estudio" />
+        </div>
+        <div class="menu">
+          <i class="fa-solid fa-bars" id="btn_menu"></i>
+          <div id="back_menu"></div>
+          <nav id="nav">
+            <img src="assets/img/LogoJACTORRES.svg" alt="" />
+            <ul>
+              <li><a href="index.html" id="selected">Inicio</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="galeria.html">Galería</a></li>
+              <li><a href="login_registro.php">Admin panel</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+
+        <div class="container-contacto">
+            <div class="contact-box">
+                <div class="left"></div>
+                    <div class="right">
+                        <h2>Contáctanos</h2>
+                        <form class="form-contacto"
+                        action="https://formspree.io/f/xayklwyg"
+                        method="POST"
+                      >
+                        <input type="text" class="field" placeholder="Tu nombre" name="name" >
+                        <input type="email" class="field" placeholder="Tu correo" name="email">
+                        <textarea class="field area" placeholder="Mensaje" name="message"></textarea>
+                        <button class="btn" type="submit">Enviar</button>
+                    </div>
+            </div>
+        </div>
+    </form>
+    <script src="assets/js/responsive.js"></script>
+  </body>
+</html>

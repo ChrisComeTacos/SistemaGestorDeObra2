@@ -9,10 +9,15 @@
   font-family: "Roboto", sans-serif; */
 }
 
+body {
+  width: 100%;
+  height: 100vh;
+}
+
 header {
   width: 100%;
   height: 80px;
-  position: fixed;
+  position: absolute;
   background: rgb(250, 250, 250);
   z-index: 1;
   padding: 40px;
@@ -37,14 +42,13 @@ header {
 }
 
 .logo img {
-  width: 60px;
+  width: 200px;
 }
 
 .menu {
   display: flex;
   align-items: center;
 }
-
 .menu ul {
   display: flex;
 }
@@ -61,11 +65,11 @@ header {
   text-transform: uppercase;
 }
 
-#selected {
+/* #selected {
   background: rgb(233, 233, 233);
   padding: 10px 40px;
   border-radius: 50px;
-}
+} */
 
 .menu nav img {
   display: none;
@@ -79,7 +83,7 @@ header {
 .container__cover {
   width: 100%;
   height: 100vh;
-  background-image: url(../img/Background-page.svg);
+  background-image: url(../img/Fondo.svg);
   background-position: right;
   background-repeat: no-repeat;
   /* background-size: cover; */
@@ -118,17 +122,129 @@ header {
   background: linear-gradient(to right, #f7cb66, #f2a900);
   color: #fff;
   cursor: pointer;
-  box-shadow: 1px 1px 30px -12px #f54d4d;
+  box-shadow: 1px 1px 30px -12px #f2a900;
   transition: all 300ms;
 }
 
 .container__cover .text input:hover {
-  box-shadow: 1px 1px 30px -6px #f54d4d;
+  box-shadow: 1px 1px 30px -6px #f2a900;
 }
 
 .container__cover .svg img {
   width: 600px;
   animation: move-vector 4s linear infinite;
+}
+
+.container-contacto {
+  position: relative;
+  /* border-radius: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+}
+
+.container-contacto:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/Fondo.svg) no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.contact-box {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+
+.left {
+  height: 100%;
+  background: url(../img/imagenContacto.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.right {
+  padding: 25px 40px;
+}
+
+.container-contacto h2 {
+  position: relative;
+  margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.container-contacto h2:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: #f2a900;
+}
+
+.field {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-color: rgba(230, 230, 230, 0.6);
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.field:focus {
+  background-color: #fff;
+  border: 2px solid rgba(30, 85, 250, 0.47);
+}
+
+.area {
+  min-height: 150px;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  background-color: #f2a900;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #dd9c03;
+}
+
+@media screen and (max-width: 850px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    height: 200px;
+  }
 }
 
 @keyframes move-vector {
@@ -167,7 +283,7 @@ header {
 @media screen and (max-width: 1020px) {
   .container__cover {
     background-image: url("");
-    background-color: #fd8986;
+    background-color: #fbe5b3;
   }
 
   .container__cover .svg img {
@@ -241,3 +357,33 @@ header {
     background: rgba(255, 255, 255, 0.2);
   }
 }
+
+/* Página Registro */
+
+.formulario__register {
+  position: absolute;
+  padding: 100px;
+}
+
+/* Página Contacto */
+
+/* .container-contacto {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+}
+
+.container-contacto:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/Background-page.svg) no-repeat center;
+  background-size: cover;
+} */

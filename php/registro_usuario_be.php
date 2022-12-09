@@ -13,6 +13,7 @@ $contrasena = hash('sha512', $contrasena);
 $query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena) 
           VALUES('$nombre_completo', '$correo', '$usuario', '$contrasena')";
 
+
 // verificar que el correo no se repita en la BD
 $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo='$correo' " );
 
@@ -25,6 +26,7 @@ if(mysqli_num_rows($verificar_correo) >0 ){
         ';
         exit();
 }
+
 
 // verificar que el nombre de usuario no se repita en la BD
 $verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$usuario' " );
@@ -45,7 +47,7 @@ if($ejecutar){
     echo '
         <script>
             alert("usuario almacenado exitosamente");
-            window.location= "../login_registro.php";
+            window.location= "../registro.php";
         </script>
     
         ';
@@ -53,7 +55,7 @@ if($ejecutar){
    echo '
         <script>
             alert("intentalo de nuevo, usuario no almacenado");
-            window.location= "../login_registro.php";
+            window.location= "../registro.php";
         </script>
     
         ';

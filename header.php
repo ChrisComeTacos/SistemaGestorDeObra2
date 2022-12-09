@@ -26,11 +26,17 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de asistencia</title>
+    <script
+      src="https://kit.fontawesome.com/1271cb789e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="assets/css/inicio.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <style>
-        body {
-            padding-top: 80px;
+        .row {
+            padding-top: 100px;
         }
     </style>
 </head>
